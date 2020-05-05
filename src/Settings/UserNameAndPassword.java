@@ -1,7 +1,5 @@
 package Settings;
 
-import org.junit.Assert;
-
 import java.util.ArrayList;
 
 public class UserNameAndPassword {
@@ -13,7 +11,7 @@ public class UserNameAndPassword {
 
      */
 
-    public void addUserToList(){
+    public void addUserToList() {
         UserNameLists.add("Steven@gmail.com");
         UserNameLists.add("James@hotmail.com");
         UserNameLists.add("David@gmail.com");
@@ -27,7 +25,7 @@ public class UserNameAndPassword {
         Given constructor. Parameter is String Username , String Password. This constructor calling the setUsername and setPassword methods.
 
      */
-    public UserNameAndPassword(String Username , String Password){
+    public UserNameAndPassword(String Username, String Password) {
         setUsername(Username);
         setPassword(Password);
     }
@@ -36,17 +34,19 @@ public class UserNameAndPassword {
         Given default constructor.
      */
 
-    public UserNameAndPassword(){
+    public UserNameAndPassword() {
 
     }
 
-     /*
-        Create a private String userName and password
+    /*
+       Create a private String userName and password
 
-        Create a Arraylist . Arraylist type should be String. ArrayList should be static . Name is UserNameLists
+       Create a Arraylist . Arraylist type should be String. ArrayList should be static . Name is UserNameLists
 
-     */
-
+    */
+    //TODO also need to initialize my arraylist
+    private String userName, password;
+    static ArrayList<String> UserNameLists = new ArrayList<>();
 
 
     /*
@@ -70,8 +70,24 @@ public class UserNameAndPassword {
         private userName = myUsername
 
         and return the username
-
     */
+    String setUsername(String myUsername) {
+        if (myUsername.length() < 6) {
+            return "Username length should be more then 6";
+        }
+        if (myUsername.contains(" ")) {
+            return "Username should not contain space";
+        }
+        if (!myUsername.contains("@")) {
+            return "Username should contain @ symbol";
+        }
+        if (myUsername.equalsIgnoreCase(myUsername)) {
+            return "Username should be unique";
+        }
+        this.userName = myUsername;
+
+        return this.userName;
+    }
 
 
     /*
@@ -89,6 +105,12 @@ public class UserNameAndPassword {
 
      */
 
+    public String setPassword(String myPassword) {
+        if (myPassword.length() <= 5) {
+            return "Password length more then 5 character";
+        }
+        this.password = password;
 
-
+        return myPassword;
+    }
 }
