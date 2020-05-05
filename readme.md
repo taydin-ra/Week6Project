@@ -3,9 +3,12 @@ This project about incredible java
 
 ##### TODO:
 
-1. THIS PROJECT WILL FAIL UNTIL YOU WRITE ALL THE METHODS
-2. THIS PROJECT IS ABOUT THE USER BUYING AN ITEM FROM ONE ONLINE SHOPPING WEBSITE
-3. FIRST START WITH Settings package and UserSettings THEN ITEM > USERNAMEANDPASSWORD > ADDRESS this is my suggestion you can start from any class.
-4. ALL THE ADDITIONAL COMMENTS ARE IN THE CLASSES
-5. WHILE WORKING ON THE TESTPACKAGE YOURTEST CLASS TRY TO TEST AS MUCH AS TESTING OPTION YOU CAN
-5.1 EXTRA ) INTERVIEW QUESTION : CREATE ONE METHOD . WITH WHICH INPUTS YOU CAN TEST THIS METHOD (BASICALLY CREATE A TEST CASE FOR IT)
+1. This project will fail until you write all the methods
+2. This project is about the user buying an item from one online shopping website
+3. this is my suggestion you can start from any class. First start with 
+    1. **Settings** package UserSettings 
+    2. Item > usernameandpassword > address 
+    
+4. All the additional comments are in the classes
+5. While working on the testpackage yourtest class try to test as much as testing option you can
+    1. Extra. interview question : create one method . with which inputs you can test this method (basically create a test case for it)
