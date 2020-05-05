@@ -24,6 +24,7 @@ public class Address {
         City
         ZipCode
      */
+    private  String Address1, City, ZipCode;
 
 
 
@@ -33,8 +34,13 @@ public class Address {
     Parameter is String(myAddress)
 
     private Address1 equal to myAddress
-
      */
+    //TODO no so clear question, what should I return?
+    public String Address1(String myAddress){
+//        return Address1.equalsIgnoreCase(myAddress) ? Address1 : myAddress;
+        this.Address1 = myAddress;
+        return this.Address1;
+    }
 
 
     /*
@@ -47,9 +53,15 @@ public class Address {
 
         if the first condition is false
         private City equal to myCity
-
-
      */
+    //TODO not so clear question, what should I return?
+    public String City(String myCity){
+        if(!this.cityList.contains(myCity)){
+            return "We are not able to ship to your location";
+        }
+        this.City = myCity;
+        return this.City;
+    }
 
 
     /*
@@ -64,6 +76,14 @@ public class Address {
         private ZipCode equal to myZipcode
 
      */
+    //TODO method name apperently is ZipCode not Zipcode...
+    public String ZipCode(String myZipcode){
+        if(myZipcode.length()!= 5){
+            return "Zip code length should be 5";
+        }
+        this.ZipCode = myZipcode;
+        return this.ZipCode;
+    }
 
 
 }

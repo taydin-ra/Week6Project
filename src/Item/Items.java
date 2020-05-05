@@ -8,6 +8,8 @@ public class Items {
       private static double allUserPrice
 
      */
+    private double price;
+    private static double allUserPrice;
 
     /*
         Create a method name is ItemName
@@ -38,6 +40,31 @@ public class Items {
             add 15.79 to price variable
 
      */
+    public void ItemName(String myItem){
+        switch (myItem){
+            case "Rose teddy bear":
+                price+=30;
+                break;
+            case "Iphone max":
+                price+=850.23;
+                break;
+            case "laptop mouse":
+                price+=23.50;
+                break;
+            case "Monitor":
+                price+=90.23;
+                break;
+            case "charger":
+                price+=43.20;
+                break;
+            case "hdmi cable":
+                price+=5.90;
+                break;
+            case "mug":
+                price+=15.79;
+                break;
+        }
+    }
 
     /*
         Create a method name is colorPrice
@@ -58,6 +85,22 @@ public class Items {
            if color = White
             add 2 to price variable
      */
+    public void colorPrice(String color){
+        switch (color){
+            case "Red":
+                price+=10;
+                break;
+            case "Blue":
+                price+=6;
+                break;
+            case "Black":
+                price+=4;
+                break;
+            case "White":
+                price+=2;
+                break;
+        }
+    }
 
 
 
@@ -73,6 +116,17 @@ public class Items {
         add 3 to price variable
 
      */
+    //TODO what should I return? , typo then*, second condition is redundant why need to check >= ???
+    public double customText(boolean b, String s){
+        if(b && s.length() > 10){
+            price+=5;
+        }
+        if(b && s.length() >= 10){
+            price+=3;
+        }
+
+        return price;
+    }
 
 
     /*
@@ -84,6 +138,10 @@ public class Items {
 
      */
 
+    public void AddtoAllUserPrice(){
+        allUserPrice+=price;
+    }
+
 
     /*
         Create a static method name is getAllUserPrice
@@ -92,5 +150,8 @@ public class Items {
 
         return the allUserPrice
      */
+    public static double getAllUserPrice(){
+        return allUserPrice;
+    }
 
 }

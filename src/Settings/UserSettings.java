@@ -17,6 +17,17 @@ public class UserSettings {
     double        myPrice
 
      */
+    public String username,
+            password,
+            Address1,
+            City,
+            ZipCode,
+            ItemName,
+            customText,
+            color;
+
+    public boolean wanaCustomText;
+    public double myPrice;
 
     /*
 
@@ -30,6 +41,18 @@ public class UserSettings {
 
      */
 
-
-
+    @Override
+    public String toString() {
+        return
+                "\nusername :" + username  +
+                "\npassword :" + password +
+                "\nAddress1 :" + Address1 +
+                "\nCity :" + City +
+                "\nZipCode :" + ZipCode +
+                "\nItemName :" + ItemName +
+                "\ncustomText :" + customText +
+                "\ncolor :" + color  +
+                "\nwanaCustomText :" + wanaCustomText +
+                "\nmyPrice :" + myPrice ;
+    }
 }
