@@ -226,7 +226,7 @@ public class Test1 {
     public static void AfterClass(){
 
         Items item = new Items();
-        Assert.assertTrue("Result should be 1163.68 but your result is " + item.getAllUserPrice(),1163.68==item.getAllUserPrice());
+        Assert.assertTrue("Result should be 1175.68 but your result is " + item.getAllUserPrice(),1175.68==item.getAllUserPrice());
 
     }
 

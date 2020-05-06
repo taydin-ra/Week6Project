@@ -2,12 +2,13 @@ package Item;
 
 public class Items {
 
-    /*
-    Create an Instance variables
+     /*
+    Create the Instance variables
       private double price
       private static double allUserPrice
 
      */
+
     private double price;
     private static double allUserPrice;
 
@@ -18,52 +19,55 @@ public class Items {
 
         NOTE : USE SWITCH STATEMENT
 
-        if my item = Rose teddy bear
+        if myItem = Rose teddy bear
             add 30 to price variable
 
-        if my item = Iphone max
+        if myItem = Iphone max
             add 850.23 to price variable
 
-         if my item = laptop mouse
+         if mmyItem = laptop mouse
             add 23.50 to price variable
 
-         if my item = Monitor
+         if myItem = Monitor
             add 90.23 to price variable
 
-          if my item = charger
+          if myItem = charger
             add 43.20 to price variable
 
-         if my item = hdmi cable
+         if myItem = hdmi cable
             add 5.90 to price variable
 
-         if my item = mug
+         if myItem = mug
             add 15.79 to price variable
 
      */
-    public void ItemName(String myItem){
-        switch (myItem){
+
+    public void ItemName(String myItem) {
+        switch (myItem) {
             case "Rose teddy bear":
-                price+=30;
+                price = price + 30;
                 break;
             case "Iphone max":
-                price+=850.23;
+                price = price + 850.23;
                 break;
             case "laptop mouse":
-                price+=23.50;
+                price = price + 23.50;
                 break;
             case "Monitor":
-                price+=90.23;
+                price = price + 90.23;
                 break;
             case "charger":
-                price+=43.20;
+                price = price + 43.20;
                 break;
             case "hdmi cable":
-                price+=5.90;
+                price = price + 5.90;
                 break;
             case "mug":
-                price+=15.79;
+                price = price + 15.79;
                 break;
+
         }
+
     }
 
     /*
@@ -85,46 +89,44 @@ public class Items {
            if color = White
             add 2 to price variable
      */
-    public void colorPrice(String color){
-        switch (color){
+
+
+    public void colorPrice(String color) {
+        switch (color) {
             case "Red":
-                price+=10;
+                price = price + 10;
                 break;
             case "Blue":
-                price+=6;
+                price = price + 6;
                 break;
             case "Black":
-                price+=4;
+                price = price + 4;
                 break;
             case "White":
-                price+=2;
+                price = price + 2;
                 break;
         }
+
     }
-
-
-
     /*
     Create a method name is customText
     return type is double
-    parameters are  one boolean and one String
+    first parameter is boolean and second parameter is String
 
-    if boolean true and String length is more then 10
+    if boolean true and String length is more than 10
         add 5 to price variable
 
-    if boolean true and String length is more then or equal to 10
+    if boolean true and String length is less than and equal to 10
         add 3 to price variable
 
      */
-    //TODO what should I return? , typo then*, second condition is redundant why need to check >= ???
-    public double customText(boolean b, String s){
-        if(b && s.length() > 10){
-            price+=5;
-        }
-        if(b && s.length() >= 10){
-            price+=3;
-        }
 
+    public double customText(boolean myCondition, String text) {
+        if (myCondition == true && text.length() > 10) {
+            price = price + 5;
+        } else if (myCondition == true && text.length() <= 10) {
+            price = price + 3;
+        }
         return price;
     }
 
@@ -138,8 +140,8 @@ public class Items {
 
      */
 
-    public void AddtoAllUserPrice(){
-        allUserPrice+=price;
+    public void AddtoAllUserPrice() {
+        allUserPrice += price;
     }
 
 
@@ -150,7 +152,8 @@ public class Items {
 
         return the allUserPrice
      */
-    public static double getAllUserPrice(){
+
+    public static double getAllUserPrice() {
         return allUserPrice;
     }
 

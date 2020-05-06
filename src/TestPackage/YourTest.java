@@ -31,6 +31,8 @@ public class YourTest {
     Check all the possible options.
 
     NOTE :  For each possibility you need to create a different @Test method
+    For Example  one of the condition is if the UserNameLists has myusername , you are supposed to create your test case for this.
+    You will do the same approach for each condition of the both methods.
 
      */
 
