@@ -79,8 +79,6 @@ public class Users {
 
      */
 
-
-
     /*
         Create a Random number which is returning 8 digit number
 
@@ -94,16 +92,14 @@ public class Users {
         Return type is void
 
         In this method
-            First ask to user "Do you want to transfer between your accounts or different user"
+             First ask to user "Do you want to transfer between your accounts or different user" (use scanner class)
 
         if the answer is own
             Call the method transferToOwnAccount in the Account class
 
         if the answer different
             Call the method transferOtherUser in the Account class
-
      */
-
 
     /*
         Print the object using toString method
