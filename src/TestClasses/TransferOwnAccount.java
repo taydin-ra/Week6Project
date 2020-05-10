@@ -1,0 +1,34 @@
+package TestClasses;
+
+import bankAccount.Users;
+import org.junit.Assert;
+
+
+public class TransferOwnAccount {
+
+
+    public static void main(String[] args) {
+
+        Users u1 = new Users("Steven" , "Gerard", "10/02/2000", "married" ,1000 , 2000);
+
+        u1.transfer(u1,u1);
+
+        System.out.println(u1.toString());
+
+        Assert.assertTrue("result should be 901 but your result is " +u1.amountAccount1 ,u1.amountAccount1==901);
+        Assert.assertTrue("result should be 2099 but your result is " +u1.amountAccount2 , u1.amountAccount2==2099 );
+
+        /*
+        Need to enter
+            Do you want to add add your relative?
+            Yes
+            Do you want to transfer between your accounts or different user
+            own
+            Enter amount of money you want to enter
+            100
+         */
+
+
+    }
+
+}
