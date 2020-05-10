@@ -10,8 +10,7 @@ public class AddRelative {
     Create an instance variable
         String fullName , age
      */
-    String fullName;
-    String age;
+
 
     /*
         Create a constructor AddRelative
@@ -22,13 +21,7 @@ public class AddRelative {
         If the age is more then or equal to 18 then instance variable age equal to parameter age (use relativeAgeChecker method)
 
      */
-    public AddRelative(String fullName , String age){
-        this.fullName = fullName;
-        boolean res= relativeAgeChecker(age);
-        if(res){
-            this.age = age;
-        }
-    }
+
 
     /*
         Create a method name is relativeAgeChecker
@@ -40,11 +33,7 @@ public class AddRelative {
 
         Note: use a Users class checkAge method.
      */
-    public boolean relativeAgeChecker(String relativeAge){
-        String result = Users.checkAge(relativeAge);
-        if(result.equals("You can get a credit card")){
-            return true;
-        }
-        return false;
-    }
+
 }
+
+

@@ -11,10 +11,6 @@ public class Account {
 
      */
 
-    public static int deposit(int accountAmount , int amountToAdd){
-        accountAmount += amountToAdd;
-        return accountAmount;
-    }
 
 
     /*
@@ -25,10 +21,7 @@ public class Account {
          remove withdrawAmount to accountAmount
 
       */
-    public static int withDraw(int accountAmount , int withdrawAmount){
-        accountAmount-= withdrawAmount;
-        return accountAmount;
-    }
+
 
 
     /*
@@ -54,25 +47,6 @@ public class Account {
 
      */
 
-    public static String transferOtherUser(Users sendingUser , Users receivingUser , int transferAmount){
-
-        String result = "";
-
-        if(transferAmount>sendingUser.amountAccount1){
-
-            result = "Sender is poor lol :)";
-
-        }else{
-
-            transferAmount = transferAmount - (transferAmount / 100 * 2) ;
-            sendingUser.amountAccount1 = withDraw(sendingUser.amountAccount1 , transferAmount);
-            receivingUser.amountAccount1 = deposit(receivingUser.amountAccount1 , transferAmount);
-            result = "Transaction is completed successfully";
-
-        }
-
-        return result;
-    }
 
 
 
@@ -91,20 +65,6 @@ public class Account {
         return Transaction is completed successfully
 
      */
-
-    public static String transferToOwnAccount(Users user  ,int transferAmount ){
-
-        String result = "";
-        if(transferAmount>user.amountAccount1){
-            result = "You need more money dude";
-        }else{
-            transferAmount = transferAmount - (transferAmount / 100) ;
-            user.amountAccount1 = withDraw(user.amountAccount1 , transferAmount);
-            user.amountAccount2 = deposit(user.amountAccount2 , transferAmount);
-            result = "Transaction is completed successfully";
-        }
-        return result;
-    }
 
 }
 
