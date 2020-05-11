@@ -12,14 +12,14 @@ public class Users {
         Create String variable name password dateOfBirth marriageStatus  relativeName relativeAge isTransferedSuceesfully
         Create int  accountNumber amountAccount1 accountNumber2 amountAccount2
 
-        all public
+        Note: all public
      */
 
 
 
     /*
     Create a constructor
-    Parameters are String name , passwod , dateOfBirth , marriageStatus
+    Parameters are String name , password , dateOfBirth , marriageStatus
     Int amountAccount1 , amountAccount2
 
     variable name equal to parameter name
@@ -37,7 +37,7 @@ public class Users {
      */
 
 
-    /*
+       /*
         Create method name is  CheckMariageStatus
         parameter is String(marriageStatus)
         return type is String
@@ -48,9 +48,21 @@ public class Users {
         Do you want to add add your relative?
 
         if the user say Yes
+        Ask to user
+        What is your relative name?
+        Ask to user
+        Date of birth relative?
+
         Then Add the relative(Use AddRelative class )
         relativeName variable equal to AddRelative class fullName
         relativeAge variable equal to AddRelative class age
+
+            if relativeAge equal to "0"
+                then change the relativeName to "Relative should be more then 18 years old";
+                then change the relativeAge to "Relative should be more then 18 years old";
+                return the "Relative should be more then 18 years old";
+            if the relativeAge is not equal to "0"
+               return Transaction done successfully
 
         If the user say No
         then no need to add anything.

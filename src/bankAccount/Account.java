@@ -48,8 +48,6 @@ public class Account {
      */
 
 
-
-
     /*
        Create a static method name is transferToOwnAccount
        parameter is One Users object , one int transferAmount
@@ -59,8 +57,17 @@ public class Account {
         return You need more money dude
 
        if the transferAmount is smaller then Users amountAccount1
+           Remove 1 percent from the transferAmount
           remove the transferAmount from user amountAccount1
           add transferAmount to user amountAccount2
+
+         For example:
+        User amountAccount1 has 1000 dollar
+        User amountAccount2 has 200 dollar
+
+        transferAmount 100
+        After the transaction SendingUser amountAccount1 should have 902 dollar
+        After the transaction User amountAccount2 should have 298 dollar
 
         return Transaction is completed successfully
 

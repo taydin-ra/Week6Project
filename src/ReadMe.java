@@ -1,11 +1,6 @@
 public class ReadMe {
 
     /*
-
-
-
-        This project will fail until you finished all the project.
-
         In this project you will create
         bank account
         make a transfer between the accounts

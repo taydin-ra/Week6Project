@@ -19,11 +19,14 @@ public class AddRelative {
         instance variable fullName equal to parameter fullName
 
         If the age is more then or equal to 18 then instance variable age equal to parameter age (use relativeAgeChecker method)
+        If the age is less then 18 then instance variable age equal to "0"
 
      */
 
 
     /*
+        Before doing this method need to finish the checkAge method in the Users class
+
         Create a method name is relativeAgeChecker
         parameter string(relativeAge)
         return type is boolean
