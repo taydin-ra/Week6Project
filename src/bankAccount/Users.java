@@ -9,20 +9,24 @@ import java.util.Scanner;
 public class Users {
 
     /*
-        Create String variable name password dateOfBirth marriageStatus  relativeName relativeAge isTransferedSuceesfully
-        Create int  accountNumber amountAccount1 accountNumber2 amountAccount2
+        Create instance variables String ( name, password ,dateOfBirth, marriageStatus,  relativeName, relativeAge, isTransferedSuceesfully)
+        Create int  variables (accountNumber ,amountAccount1, accountNumber2, amountAccount2)
 
-        Note: all public
+        all public
      */
 
 
-
+    /*
+    NOTE:
+    Before the constructor create the methods which given under the constructor and than come back to create the constructor
+     */
+//
     /*
     Create a constructor
     Parameters are String name , password , dateOfBirth , marriageStatus
-    Int amountAccount1 , amountAccount2
+    int amountAccount1 , amountAccount2
 
-    variable name equal to parameter name
+    instance variable name equals to parameter name
     same for password
     same for amountAccount1
     same for amountAccount2
@@ -31,53 +35,68 @@ public class Users {
 
     variable accountNumber get the the number from the  randomNumberCreader method
     variable accountNumber2 get the the number from the  randomNumberCreader method
-    variable marriageStatus equal to CheckMariageStatus method return
-    variable dateOfBirth equal to checkAge return
+    variable marriageStatus equals to CheckMariageStatus method return
+    variable dateOfBirth equals to checkAge method return
 
      */
 
 
-       /*
+    /*
         Create method name is  CheckMariageStatus
         parameter is String(marriageStatus)
         return type is String
 
-        if String marriageStatus is married
+        if String marriageStatus equals married
 
         Ask to user (use scanner class)
         Do you want to add add your relative?
 
-        if the user say Yes
+        if the user says Yes
         Ask to user
         What is your relative name?
         Ask to user
         Date of birth relative?
 
-        Then Add the relative(Use AddRelative class )
-        relativeName variable equal to AddRelative class fullName
-        relativeAge variable equal to AddRelative class age
+        Then Add the relative(Use AddRelative class ) (Hint create an object of AddRelative class)
+        relativeName variable equals to AddRelative class fullName
+        relativeAge variable equals to AddRelative class age
 
-            if relativeAge equal to "0"
+            if relativeAge equals to "0"
                 then change the relativeName to "Relative should be more then 18 years old";
                 then change the relativeAge to "Relative should be more then 18 years old";
                 return the "Relative should be more then 18 years old";
             if the relativeAge is not equal to "0"
-               return Transaction done successfully
+               return "Transaction done successfully"
 
         If the user say No
-        then no need to add anything.
+        then return no need to add relative.
      */
+
+
 
     /*
         Create a static method name is checkAge
         parameter is one String(myDOB)
         return type is String
 
-        Compare today date to myDOB
+        Compare today's date to myDOB
 
-        if myDOB compare to today date is 18 then return "You can get a credit card"
+        if myDOB compare to today date is greater than  18 then return "You can get a credit card"
 
         if myDOB compare to today date is less then 18 "You should be at least 18 years old to get a credit card."
+
+        if myDOB compare to today date equals 18 then you need to compare the months.(use nested if)
+
+        if today's monthvalue is greater than myDOB's monthvalue return "You can get a credit card"
+
+        if today's monthvalue is less than myDOB's monthvalue return "You should be at least 18 years old to get a credit card."
+
+        if today's monthvalue is equal to myDOB's monthvalue , you need to compare day of the months. (use nested if)
+
+        If today's amount of day is greater than myDOB's amount of days return "You can get a credit card"
+
+        else return "You should be at least 18 years old to get a credit card."
+
 
         For example today date is 10/05/2020
 
@@ -89,14 +108,24 @@ public class Users {
 
         return should be  "You should be at least 18 years old to get a credit card."
 
+        Hint: Use LocalDate and Period classes,
+
      */
+
+
+
+
 
     /*
         Create a Random number which is returning 8 digit number
 
             it should be between 10000000 - 99999999
 
+            return type is int
+
      */
+
+
 
     /*
         Create a method name is transfer
@@ -104,17 +133,20 @@ public class Users {
         Return type is void
 
         In this method
-             First ask to user "Do you want to transfer between your accounts or different user" (use scanner class)
+            First ask to user "Do you want to transfer between your accounts or different user" (use scanner class)
 
         if the answer is own
-            Call the method transferToOwnAccount in the Account class
+           instance variable isTransferedSuceesfully eaguals to the the method transferToOwnAccount in the Account class
 
         if the answer different
-            Call the method transferOtherUser in the Account class
+         instance variable isTransferedSuceesfully eaguals to the the method transferOtherUser in the Account class
+
+
      */
 
+
     /*
-        Print the object using toString method
+        Print the objects using toString method
 
         like
          return "\nname: " + name +
@@ -123,7 +155,6 @@ public class Users {
                 ......
 
      */
-
 
 
 

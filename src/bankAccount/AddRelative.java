@@ -8,35 +8,32 @@ public class AddRelative {
 
     /*
     Create an instance variable
-        String fullName , age
+        String fullName , String age
      */
-
+//
 
     /*
         Create a constructor AddRelative
-            parameters String fullName and age
+            parameters String fullName and  String age
 
-        instance variable fullName equal to parameter fullName
+        instance variable fullName equals to parameter fullName
 
-        If the age is more then or equal to 18 then instance variable age equal to parameter age (use relativeAgeChecker method)
-        If the age is less then 18 then instance variable age equal to "0"
+        If the age is greater than  and equal to 18, so the  instance variable age equals to parameter age (use relativeAgeChecker method)
+        If the age is less than 18, so the instance variable age equals to "0"
 
      */
 
 
     /*
-        Before doing this method need to finish the checkAge method in the Users class
-
         Create a method name is relativeAgeChecker
-        parameter string(relativeAge)
+        parameter String(relativeAge)
         return type is boolean
 
-        if the relativeAge more or equal to 18 then return true
+        if the relativeAge more and equal to 18 return true
         else false
 
         Note: use a Users class checkAge method.
      */
 
+
 }
-
-

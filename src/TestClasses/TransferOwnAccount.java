@@ -17,7 +17,9 @@ public class TransferOwnAccount {
 
         Assert.assertTrue("result should be 901 but your result is " +u1.amountAccount1 ,u1.amountAccount1==901);
         Assert.assertTrue("result should be 2099 but your result is " +u1.amountAccount2 , u1.amountAccount2==2099 );
-
+            /*
+            Run this class and enter the below information on the console.
+             */
         /*
       Do you want to add add your relative?
         Yes
@@ -34,7 +36,7 @@ public class TransferOwnAccount {
 
         /*
 
-        Result should be:
+        Output should be:
         name: Steven
         password: Gerard
         dateOfBirth: You can get a credit card

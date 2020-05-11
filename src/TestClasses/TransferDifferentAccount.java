@@ -7,18 +7,20 @@ public class TransferDifferentAccount {
 
     public static void main(String[] args) {
 
-        Users u1 = new Users("David" , "Villa", "10/02/2000", "married" ,1000 , 2000);
+        Users u1 = new Users("David", "Villa", "10/02/2000", "married", 1000, 2000);
 
-        Users u2 = new Users("Xavi" , "Hernandes", "11/12/1998", "single" ,3000 , 2000);
+        Users u2 = new Users("Xavi", "Hernandes", "11/12/1998", "single", 3000, 2000);
 
-        u1.transfer(u1,u2);
+        u1.transfer(u1, u2);
 
         System.out.println(u1.toString());
         System.out.println(u2.toString());
 
-        Assert.assertTrue("result should be 608 but your result is " +u1.amountAccount1 ,u1.amountAccount1==804);
-        Assert.assertTrue("result should be 3392 but your result is " +u2.amountAccount1 , u2.amountAccount1==3196 );
-
+        Assert.assertTrue("result should be 608 but your result is " + u1.amountAccount1, u1.amountAccount1 == 804);
+        Assert.assertTrue("result should be 3392 but your result is " + u2.amountAccount1, u2.amountAccount1 == 3196);
+            /*
+            Run this class and enter the below information on the console//
+             */
     /*
        Do you want to add add your relative?
         Yes
@@ -32,6 +34,7 @@ public class TransferDifferentAccount {
         200
     */
 
+        // Output should match with the below
     /*
         name: David
         password: Villa
