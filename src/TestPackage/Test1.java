@@ -25,6 +25,7 @@ public class Test1 {
 
         UserSettings userSettings = new UserSettings();
 
+
         userSettings.username = "Jerremy@gmail.com";
         userSettings.password = "123456789";
         userSettings.Address1 = "123 main";

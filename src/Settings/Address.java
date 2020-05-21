@@ -16,8 +16,8 @@ public class Address {
     private String City;
     private String ZipCode;
 
-    private static ArrayList<String> cityList = new ArrayList<>();
 
+    private static ArrayList<String> cityList = new ArrayList<>();
     public void SetCity() {
 
         cityList.add("New York");

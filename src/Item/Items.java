@@ -43,6 +43,7 @@ public class Items {
      */
 
     public void ItemName(String myItem) {
+        
         switch (myItem) {
             case "Rose teddy bear":
                 price = price + 30;

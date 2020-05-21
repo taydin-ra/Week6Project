@@ -109,8 +109,8 @@ public class UserNameAndPassword {
      */
 
     public String setPassword(String myPassword) {
-        int len = myPassword.length();
 
+        int len = myPassword.length();
         if (len <= 5) {
             return "Password length more then 5 character";
         } else {
