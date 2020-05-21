@@ -14,6 +14,7 @@ public class TransferDifferentAccount {
         u1.transfer(u1, u2);
 
         System.out.println(u1.toString());
+
         System.out.println(u2.toString());
 
         Assert.assertTrue("result should be 608 but your result is " + u1.amountAccount1, u1.amountAccount1 == 804);

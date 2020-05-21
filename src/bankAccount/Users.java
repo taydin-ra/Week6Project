@@ -2,11 +2,26 @@ package bankAccount;
 
 
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Users {
+
+    public String name;
+    public String password;
+    public String dateOfBirth; // format should be MM-dd-yyyy
+    public String marriageStatus;
+    public int accountNumber;
+    public int amountAccount1;
+    public int accountNumber2;
+    public int amountAccount2;
+    String relativeName;
+    String relativeAge;
+
+    String isTransferedSuceesfully;
 
     /*
         Create instance variables String ( name, password ,dateOfBirth, marriageStatus,  relativeName, relativeAge, isTransferedSuceesfully)
@@ -39,6 +54,18 @@ public class Users {
     variable dateOfBirth equals to checkAge method return
 
      */
+
+    public Users(String name, String password,String dateOfBirth ,String marriageStatus,int amountAccount1 ,int  amountAccount2){
+        this.name=name;
+        this.password=password;
+        this.amountAccount1=amountAccount1;
+        this.amountAccount2=amountAccount2;
+        this.accountNumber=randomNumberCreader();
+        this.accountNumber2=randomNumberCreader();
+        this.marriageStatus=CheckMariageStatus(marriageStatus);
+        this.dateOfBirth=checkAge(dateOfBirth);
+
+    }
 
 
     /*
@@ -73,6 +100,35 @@ public class Users {
      */
 
 
+    public String CheckMariageStatus(String marriageStatus) {
+
+        String res = "";
+        if (marriageStatus.equals("married")) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Do you want to add add your relative?");
+            String answer = scan.nextLine();
+            if (answer.equals("Yes")) {
+                System.out.println("What is your relative name?");
+                String rname = scan.nextLine();
+                System.out.println("Date of birth relative?");
+                String dob = scan.nextLine();
+                AddRelative ad = new AddRelative(rname,dob);
+                relativeName = ad.fullName;
+                relativeAge = ad.age;
+                if (relativeAge.equals("0")) {
+                    relativeName = "Relative should be more then 18 years old";
+                    relativeAge = "Relative should be more then 18 years old";
+                    res="Relative should be more then 18 years old";
+                } else {
+                    res = "Transaction done successfully";
+                }
+            } else {
+                res = "no need to add relative.";
+            }
+
+        }
+        return res;
+    }
 
     /*
         Create a static method name is checkAge
@@ -111,8 +167,53 @@ public class Users {
         Hint: Use LocalDate and Period classes,
 
      */
+    public static String checkAge(String age) {
 
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatters = DateTimeFormatter.ofPattern("d/MM/uuuu");
+        String text = date.format(formatters);
+        LocalDate today = LocalDate.parse(text, formatters);
 
+        LocalDate myAge = LocalDate.parse(age, formatters);
+
+        int num = today.compareTo(LocalDate.parse(age, formatters));
+
+        String result = "";
+
+        if (num > 18) {
+
+            result = "You can get a credit card";
+
+        } else if (num < 18) {
+
+            result = "You should be at least 18 years old to get a credit card.";
+
+        } else if (num == 18) {
+
+            if (today.getMonthValue() > myAge.getMonthValue()) {
+
+                result = "You can get a credit card";
+
+            } else if (today.getMonthValue() < myAge.getMonthValue()) {
+
+                result = "You should be at least 18 years old to get a credit card.";
+
+            } else if (today.getMonthValue() == myAge.getMonthValue()) {
+
+                if (today.getDayOfMonth() > myAge.getDayOfMonth()) {
+
+                    result = "You can get a credit card";
+
+                } else {
+
+                    result = "You should be at least 18 years old to get a credit card.";
+                }
+            }
+        }
+
+        return result;
+
+    }
 
 
 
@@ -123,7 +224,16 @@ public class Users {
 
             return type is int
 
+
      */
+
+    public int randomNumberCreader(){
+        Random rnd = new Random();
+
+        int random = rnd.nextInt(99999999 - 10000000) + 10000000;
+
+        return random;
+    }
 
 
 
@@ -144,6 +254,25 @@ public class Users {
 
      */
 
+    public void transfer(Users user, Users user2){
+        Scanner ssan= new Scanner(System.in);
+        System.out.println("Do you want to transfer between your accounts or different user");
+        String answer= ssan.nextLine();
+        if(answer.equals("own")){
+            System.out.println("Enter amount of money you want to enter");
+
+            int transferAmount = ssan.nextInt();
+
+            isTransferedSuceesfully=Account.transferToOwnAccount(user,transferAmount);
+        }else{
+            System.out.println("Enter amount of money you want to enter");
+
+            int transferAmount = ssan.nextInt();
+
+            isTransferedSuceesfully=Account.transferOtherUser(user,user2,transferAmount);
+        }
+    }
+
 
     /*
         Print the objects using toString method
@@ -155,7 +284,18 @@ public class Users {
                 ......
 
      */
-
+    public String toString() {
+        return "\nname: " + name +
+                "\npassword: " + password +
+                "\ndateOfBirth: " + dateOfBirth +
+                "\nmarriageStatus: " + marriageStatus +
+                "\naccountNumber: " + accountNumber +
+                "\namount in account 1 : " + amountAccount1 +
+                "\naccountNumber2: " + accountNumber2 +
+                "\namount in account 2 : " + amountAccount2 +
+                "\nrelativeName: " + relativeName +
+                "\nrelativeAge: " + relativeAge;
+    }
 
 
 }
